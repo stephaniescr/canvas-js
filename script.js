@@ -13,7 +13,6 @@ var GraficoPizza = function(opcoes) {
     }
 
     if(this.opcoes.legenda){
-      indice_cor = 0;
       var legendaHTML = "";
       for(categoria in this.opcoes.data){
         legendaHTML += "<div style='font-family:Helvetica; color:#404040'><span style='display:inline-block;width:20px;background-color:" +
@@ -120,7 +119,7 @@ var ctx = meuGraficoPizza.getContext("2d");
 
 var minhaLegenda = document.getElementById("minhaLegenda");
 
-var meuGraficoPizza = new GraficoPizza(
+meuGraficoPizza = new GraficoPizza(
     {
         canvas:meuGraficoPizza,
         data:meusAlbuns,
@@ -134,9 +133,9 @@ var meuGraficoRosquinha = document.getElementById("meuGraficoRosquinha");
 meuGraficoRosquinha.width = 300;
 meuGraficoRosquinha.height = 300;
 
-var ctx = meuGraficoRosquinha.getContext("2d");
+ctx = meuGraficoRosquinha.getContext("2d");
 
-var meuGraficoRosquinha = new GraficoPizza(
+meuGraficoRosquinha = new GraficoPizza(
     {
         canvas:meuGraficoRosquinha,
         data:meusAlbuns,
